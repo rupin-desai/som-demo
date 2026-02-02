@@ -2,14 +2,22 @@
 
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/utils/animations";
 
 export default function Footer() {
     return (
         <footer className="bg-secondary-navy text-white pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
                     {/* Column 1: Brand & About */}
-                    <div>
+                    <motion.div variants={fadeInUp}>
                         <div className="mb-6 bg-white p-2 w-fit rounded">
                             {/* Logo Placeholder - Adjust as needed */}
                             <span className="text-secondary-navy font-bold text-xl flex items-center gap-2">
@@ -35,10 +43,10 @@ export default function Footer() {
                                 <Instagram className="w-5 h-5" />
                             </Link>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Column 2: Quick Links */}
-                    <div>
+                    <motion.div variants={fadeInUp}>
                         <h3 className="text-accent-gold font-bold tracking-widest uppercase text-sm mb-8">
                             Quick Links
                         </h3>
@@ -51,10 +59,10 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Column 3: Expertise */}
-                    <div>
+                    <motion.div variants={fadeInUp}>
                         <h3 className="text-accent-gold font-bold tracking-widest uppercase text-sm mb-8">
                             Expertise
                         </h3>
@@ -67,10 +75,10 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Column 4: Get In Touch */}
-                    <div>
+                    <motion.div variants={fadeInUp}>
                         <h3 className="text-accent-gold font-bold tracking-widest uppercase text-sm mb-8">
                             Get In Touch
                         </h3>
@@ -96,8 +104,8 @@ export default function Footer() {
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">

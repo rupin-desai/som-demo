@@ -7,12 +7,8 @@ export default function ServicesPage() {
     return (
         <main>
             <PageHero
-                title={
-                    <>
-                        Comprehensive Solutions for <br />
-                        <span className="text-accent-gold">Your Business Growth</span>
-                    </>
-                }
+                heading="Comprehensive Solutions for"
+                highlightedHeading="Your Business Growth"
                 breadcrumbText="Services"
                 subtitle="Comprehensive accounting and financial solutions tailored to your business needs."
                 backgroundImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"

@@ -6,12 +6,8 @@ export default function ContactPage() {
     return (
         <main className="bg-[#FAFAFA]">
             <PageHero
-                title={
-                    <>
-                        Get in Touch with our <br />
-                        <span className="text-accent-gold">Global Support Team</span>
-                    </>
-                }
+                heading="Get in Touch with our"
+                highlightedHeading="Global Support Team"
                 breadcrumbText="Contact"
                 subtitle="Ready to transform your financial operations? Our team is here to help you every step of the way."
                 backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"

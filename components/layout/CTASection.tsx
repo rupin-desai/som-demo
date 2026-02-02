@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
 
 export default function CTASection() {
     return (
@@ -11,17 +13,32 @@ export default function CTASection() {
                     {/* Background Glow */}
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
-                    <div className="relative z-10 max-w-4xl mx-auto">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <motion.div
+                        className="relative z-10 max-w-4xl mx-auto"
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.h2
+                            variants={fadeInUp}
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                        >
                             Ready to optimize your <br className="hidden md:block" />
                             <span className="text-accent-gold">financial operations?</span>
-                        </h2>
+                        </motion.h2>
 
-                        <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                        <motion.p
+                            variants={fadeInUp}
+                            className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+                        >
                             Partner with India's premier KPO firm and gain access to top-tier accounting talent today.
-                        </p>
+                        </motion.p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                        <motion.div
+                            variants={fadeInUp}
+                            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+                        >
                             <Link
                                 href="/contact"
                                 className="inline-flex items-center gap-2 bg-accent-gold text-secondary-navy font-bold px-8 py-4 rounded-full hover:bg-white transition-colors duration-300 transform hover:scale-105"
@@ -35,8 +52,8 @@ export default function CTASection() {
                             >
                                 Contact Us
                             </Link>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
         </section>

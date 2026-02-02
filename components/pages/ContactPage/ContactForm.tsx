@@ -1,10 +1,18 @@
 'use client';
 
 import { Send } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/utils/animations';
 
 export default function ContactForm() {
     return (
-        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-xl border border-zinc-100">
+        <motion.div
+            className="bg-white p-8 md:p-12 rounded-[40px] shadow-xl border border-zinc-100"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+        >
             <h2 className="text-3xl font-bold text-secondary-navy mb-2">
                 Send us a Message
             </h2>
@@ -87,6 +95,6 @@ export default function ContactForm() {
                     Send Message <Send className="w-4 h-4" />
                 </button>
             </form>
-        </div>
+        </motion.div>
     );
 }

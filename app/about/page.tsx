@@ -9,12 +9,8 @@ export default function AboutPage() {
     return (
         <main>
             <PageHero
-                title={
-                    <>
-                        Your Trusted Partner in <br />
-                        <span className="text-accent-gold">Accounting & Financial Services</span>
-                    </>
-                }
+                heading="Your Trusted Partner in"
+                highlightedHeading="Accounting & Financial Services"
                 breadcrumbText="About Us"
                 subtitle="We are a premier Knowledge Processing Outsourcing (KPO) firm based in India, providing world-class services globally."
                 backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"

@@ -2,6 +2,8 @@
 
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { fadeInLeft, fadeInRight } from '@/utils/animations';
 
 export default function ServiceDetails() {
     const services = [
@@ -52,13 +54,19 @@ export default function ServiceDetails() {
     ];
 
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
                 {services.map((service, index) => (
                     <div key={index} className={`flex flex-col lg:flex-row items-center gap-16 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
 
                         {/* Text Content */}
-                        <div className="w-full lg:w-1/2">
+                        <motion.div
+                            className="w-full lg:w-1/2"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                            variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+                        >
                             <h2 className="text-3xl md:text-4xl font-bold text-secondary-navy mb-4">
                                 {service.title}
                             </h2>
@@ -87,19 +95,25 @@ export default function ServiceDetails() {
                                 Inquire About This Service
                                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                             </Link>
-                        </div>
+                        </motion.div>
 
                         {/* Image Side */}
-                        <div className="w-full lg:w-1/2 relative flex justify-center">
+                        <motion.div
+                            className="w-full lg:w-1/2 relative flex justify-center"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
+                            variants={index % 2 === 0 ? fadeInRight : fadeInLeft}
+                        >
                             {/* Decorative Container depending on index to vary style or keep consistent */}
-                            <div className={`relative rounded-[50px] overflow-hidden shadow-2xl w-full max-w-lg aspect-auto ${index % 2 === 1 ? 'border-[12px] border-[#F5F2Eb]' : 'border-[12px] border-white'}`}>
+                            <div className={`relative rounded-[50px] overflow-hidden shadow-2xl w-full max-w-lg aspect-auto ${index % 2 === 1 ? 'border-12 border-[#F5F2Eb]' : 'border-12 border-white'}`}>
                                 <img
                                     src={service.image}
                                     alt={service.title}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
                 ))}

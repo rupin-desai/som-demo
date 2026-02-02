@@ -1,3 +1,8 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
+
 export default function AboutHero() {
     return (
         <section className="relative py-24 bg-primary-navy overflow-hidden">
@@ -7,15 +12,26 @@ export default function AboutHero() {
                 </svg>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            <motion.div
+                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.h1
+                    variants={fadeInUp}
+                    className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight"
+                >
                     About <span className="text-accent-gold">Us</span>
-                </h1>
-                <p className="max-w-3xl mx-auto text-lg text-zinc-300 leading-relaxed">
+                </motion.h1>
+                <motion.p
+                    variants={fadeInUp}
+                    className="max-w-3xl mx-auto text-lg text-zinc-300 leading-relaxed"
+                >
                     We are a team of dedicated professionals committed to delivering excellence.
                     Our mission is to empower businesses with innovative solutions and unparalleled service.
-                </p>
-            </div>
+                </motion.p>
+            </motion.div>
         </section>
     );
 }

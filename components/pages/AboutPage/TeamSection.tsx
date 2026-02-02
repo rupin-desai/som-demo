@@ -1,5 +1,8 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
+
 export default function TeamSection() {
     const teams = [
         {
@@ -23,21 +26,34 @@ export default function TeamSection() {
         <section className="py-20 bg-[#F5F2Eb]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <motion.div
+                    className="text-center mb-16"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                >
                     <h2 className="text-4xl md:text-5xl font-bold text-secondary-navy mb-4">
                         Our Team
                     </h2>
                     <p className="text-zinc-600 text-lg">
                         Highly skilled professionals dedicated to your success.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Team Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
                     {teams.map((team, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             className="bg-white rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                            variants={fadeInUp}
                         >
                             {/* Image Container */}
                             <div className="h-64 overflow-hidden">
@@ -57,9 +73,9 @@ export default function TeamSection() {
                                     {team.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

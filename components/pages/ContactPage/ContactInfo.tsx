@@ -1,12 +1,23 @@
 'use client';
 
 import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
 
 export default function ContactInfo() {
     return (
-        <div className="space-y-6">
+        <motion.div
+            className="space-y-6"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+        >
             {/* Call Us */}
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4">
+            <motion.div
+                variants={fadeInUp}
+                className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4"
+            >
                 <div className="w-12 h-12 rounded-2xl bg-[#ecf2ff] flex items-center justify-center shrink-0 text-[#4c82f7]">
                     <Phone className="w-5 h-5" />
                 </div>
@@ -15,10 +26,13 @@ export default function ContactInfo() {
                     <p className="text-secondary-navy font-bold">404.752.0600</p>
                     <p className="text-zinc-500 text-sm">Mon-Fri from 9am to 6pm.</p>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Email Us */}
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4">
+            <motion.div
+                variants={fadeInUp}
+                className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4"
+            >
                 <div className="w-12 h-12 rounded-2xl bg-[#fff4de] flex items-center justify-center shrink-0 text-[#ffa800]">
                     <Mail className="w-5 h-5" />
                 </div>
@@ -27,10 +41,13 @@ export default function ContactInfo() {
                     <p className="text-secondary-navy font-bold">info@btcpa.net</p>
                     <p className="text-zinc-500 text-sm">We'll respond within 24 hours.</p>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Visit Us */}
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4">
+            <motion.div
+                variants={fadeInUp}
+                className="bg-white p-6 rounded-3xl shadow-sm border border-zinc-100 flex items-start gap-4"
+            >
                 <div className="w-12 h-12 rounded-2xl bg-[#e0f7f2] flex items-center justify-center shrink-0 text-[#00bfa5]">
                     <MapPin className="w-5 h-5" />
                 </div>
@@ -39,10 +56,13 @@ export default function ContactInfo() {
                     <p className="text-secondary-navy font-bold">India Operations Center</p>
                     <p className="text-zinc-500 text-sm">Strategic KPO Hub, India</p>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Business Hours */}
-            <div className="bg-secondary-navy p-8 rounded-[30px] shadow-lg text-white">
+            <motion.div
+                variants={fadeInUp}
+                className="bg-secondary-navy p-8 rounded-[30px] shadow-lg text-white"
+            >
                 <div className="flex items-center gap-3 mb-6">
                     <Clock className="w-6 h-6 text-accent-gold" />
                     <span className="font-bold text-lg">Business Hours</span>
@@ -61,7 +81,7 @@ export default function ContactInfo() {
                         <span className="font-bold text-accent-gold">Closed</span>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }

@@ -1,6 +1,8 @@
 'use client';
 
 import { CheckCircle2, Cloud, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
 
 export default function SecuritySection() {
     const platforms = [
@@ -20,22 +22,37 @@ export default function SecuritySection() {
     ];
 
     return (
-        <section className="py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 bg-white relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#e4b44b 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+
+            <motion.div
+                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
                 {/* Header */}
-                <div className="text-center mb-16">
+                <motion.div
+                    className="text-center mb-16"
+                    variants={fadeInUp}
+                >
                     <h2 className="text-4xl md:text-5xl font-bold text-secondary-navy mb-4">
                         Securing Your <span className="text-accent-gold">Financial Future</span>
                     </h2>
                     <p className="text-zinc-500 text-lg">
                         Enterprise-grade security meets industry-leading cloud platforms.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Platform Expertise Card */}
-                    <div className="bg-secondary-navy rounded-[40px] p-10 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <motion.div
+                        variants={fadeInUp}
+                        className="bg-secondary-navy rounded-[40px] p-10 md:p-12 shadow-2xl relative overflow-hidden group"
+                    >
                         {/* Header */}
                         <div className="flex items-start gap-6 mb-10">
                             <div className="w-16 h-16 rounded-2xl bg-accent-gold text-secondary-navy flex items-center justify-center shrink-0 shadow-lg">
@@ -64,10 +81,13 @@ export default function SecuritySection() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Data Integrity Card */}
-                    <div className="bg-secondary-navy rounded-[40px] p-10 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <motion.div
+                        variants={fadeInUp}
+                        className="bg-secondary-navy rounded-[40px] p-10 md:p-12 shadow-2xl relative overflow-hidden group"
+                    >
                         {/* Header */}
                         <div className="flex items-start gap-6 mb-10">
                             <div className="w-16 h-16 rounded-2xl bg-transparent border-2 border-accent-gold text-accent-gold flex items-center justify-center shrink-0 shadow-lg">
@@ -96,9 +116,9 @@ export default function SecuritySection() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -1,5 +1,8 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer, wordStagger, wordAnimation } from '@/utils/animations';
+
 export default function IndustriesSection() {
     const industries = [
         {
@@ -35,47 +38,71 @@ export default function IndustriesSection() {
     ];
 
     return (
-        <section className="py-20 bg-[#F5F2Eb]">
+        <section className="py-12 md:py-20 bg-[#F5F2Eb]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <span className="text-accent-gold font-bold tracking-widest uppercase text-base mb-4 block">
-                        Our Expertise
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-secondary-navy leading-tight">
-                        Industries We Serve
-                    </h2>
-                    <p className="mt-4 text-zinc-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                        We provide specialized accounting outsourcing services to firms across multiple industries.
-                    </p>
-                </div>
+                <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    {/* Header */}
+                    <div className="text-center mb-12 md:mb-16">
+                        <motion.span
+                            variants={fadeInUp}
+                            className="text-accent-gold font-bold tracking-widest uppercase text-sm md:text-base mb-4 block"
+                        >
+                            Our Expertise
+                        </motion.span>
+                        <motion.h2
+                            variants={wordStagger}
+                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-navy leading-tight"
+                        >
+                            {["Industries", "We", "Serve"].map((word, i) => (
+                                <motion.span key={i} variants={wordAnimation} className="inline-block mr-2 md:mr-3">
+                                    {word}
+                                </motion.span>
+                            ))}
+                        </motion.h2>
+                        <motion.p
+                            variants={fadeInUp}
+                            className="mt-4 text-zinc-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed"
+                        >
+                            We provide specialized accounting outsourcing services to firms across multiple industries.
+                        </motion.p>
+                    </div>
 
-                {/* Grid of Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {industries.map((industry, index) => (
-                        <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
-                            {/* Image Container */}
-                            <div className="h-64 overflow-hidden relative">
-                                <img
-                                    src={industry.image}
-                                    alt={industry.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                                />
-                            </div>
+                    {/* Grid of Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {industries.map((industry, index) => (
+                            <motion.div
+                                key={index}
+                                variants={fadeInUp}
+                                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
+                            >
+                                {/* Image Container */}
+                                <div className="h-56 md:h-64 overflow-hidden relative">
+                                    <img
+                                        src={industry.image}
+                                        alt={industry.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                </div>
 
-                            {/* Content */}
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold text-secondary-navy mb-4">
-                                    {industry.title}
-                                </h3>
+                                {/* Content */}
+                                <div className="p-6 md:p-8">
+                                    <h3 className="text-xl md:text-2xl font-bold text-secondary-navy mb-4">
+                                        {industry.title}
+                                    </h3>
 
-                                <p className="text-zinc-600 leading-relaxed">
-                                    {industry.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                                    <p className="text-zinc-600 leading-relaxed text-sm md:text-base">
+                                        {industry.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

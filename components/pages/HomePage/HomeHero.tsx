@@ -6,15 +6,15 @@ import { fadeInUp, fadeInRight, staggerContainer, wordStagger, wordAnimation } f
 export default function HomeHero() {
     return (
         <section className="relative min-h-dvh md:min-h-[700px] flex items-center overflow-hidden bg-secondary-navy">
-            {/* Background Image with Gradient Filter */}
-            <div className="absolute inset-0 z-0">
-                {/* Gradient: Opaque on mobile, Left-to-right on desktop */}
-                <div className="absolute inset-0 bg-linear-to-b md:bg-linear-to-r from-secondary-navy via-secondary-navy/95 md:via-secondary-navy/90 to-secondary-navy/80 md:to-secondary-navy/10 z-10 mix-blend-normal"></div>
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0 bg-black">
                 <img
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
+                    src="/images/home_hero.png"
                     alt="Hero Background"
-                    className="w-full h-full object-cover opacity-50 md:opacity-60"
+                    className="w-full h-full object-cover"
                 />
+                {/* Black Overlay */}
+                <div className="absolute inset-0 bg-black/60 md:bg-black/60"></div>
             </div>
 
             {/* Decorative Rings - Hidden on Mobile/Tablet */}

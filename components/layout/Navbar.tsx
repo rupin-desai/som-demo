@@ -123,7 +123,13 @@ export default function Navbar() {
                             className="fixed top-0 right-0 h-dvh w-[80%] max-w-sm bg-[#06356b] shadow-2xl z-50 lg:hidden flex flex-col overflow-y-auto"
                         >
                             <div className="flex justify-end p-6">
-                                {/* Close button handled by the main navbar toggle, but extra spacing here */}
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="p-2 rounded-md text-white hover:text-[#e4b44b] focus:outline-none transition-colors"
+                                    aria-label="Close menu"
+                                >
+                                    <X className="w-8 h-8" />
+                                </button>
                             </div>
 
                             <div className="flex flex-col px-8 pt-10 space-y-6">

@@ -9,12 +9,12 @@ export default function HomeHero() {
         <section className="relative min-h-dvh md:min-h-[700px] flex items-center overflow-hidden bg-secondary-navy">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0 bg-black">
-                <picture>
+                <picture className="w-full h-full">
                     <source media="(max-width: 767px)" srcSet="/images/home_hero_mobile.png" />
                     <img
                         src="/images/home_hero.png"
                         alt="Hero Background"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover block"
                     />
                 </picture>
                 {/* Black Overlay */}

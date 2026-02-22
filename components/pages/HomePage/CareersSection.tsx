@@ -71,7 +71,7 @@ export default function CareersSection() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                                src="/images/home_3.png"
                                 alt="Careers at Our Firm"
                                 className="w-full h-full object-cover rounded-tl-[90px] rounded-br-[90px] rounded-tr-2xl rounded-bl-2xl"
                             />

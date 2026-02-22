@@ -9,7 +9,7 @@ export default function ServiceDetails() {
     const services = [
         {
             title: "Accounting & Bookkeeping",
-            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop",
+            image: "/images/home_accounting.png",
             features: [
                 "General Ledger & Trial Balance Preparation",
                 "Accounts Payable & Receivable Management",
@@ -21,7 +21,7 @@ export default function ServiceDetails() {
         },
         {
             title: "Tax Preparation & Compliance",
-            image: "https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home_tax.png",
             features: [
                 "Corporate & Individual Tax Returns",
                 "VAT/GST & Sales Tax Filings",
@@ -32,7 +32,7 @@ export default function ServiceDetails() {
         },
         {
             title: "Payroll Processing",
-            image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
+            image: "/images/home_payroll.png",
             features: [
                 "Payroll Setup & Processing",
                 "Payslip Generation & Compliance Reporting",

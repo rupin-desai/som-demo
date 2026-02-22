@@ -74,7 +74,7 @@ export default function MissionVisionSection() {
                             {/* Image Container */}
                             <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border-6 border-[#F5F2Eb] max-w-lg">
                                 <img
-                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                                    src="/images/about_hero.png"
                                     alt="Our Mission and Vision"
                                     className="w-full h-full object-cover"
                                 />

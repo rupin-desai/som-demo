@@ -13,7 +13,7 @@ export default function AboutPage() {
                 highlightedHeading="Accounting & Financial Services"
                 breadcrumbText="About Us"
                 subtitle="We are a premier Knowledge Processing Outsourcing (KPO) firm based in India, providing world-class services globally."
-                backgroundImage="/images/about_hero.png"
+                backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
             />
             <MissionVisionSection />
             <TeamSection />

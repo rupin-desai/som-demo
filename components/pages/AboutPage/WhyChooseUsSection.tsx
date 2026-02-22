@@ -42,7 +42,7 @@ export default function WhyChooseUsSection() {
                     >
                         <div className="h-full rounded-[60px] overflow-hidden shadow-2xl border-[#f5f2ea] border-6">
                             <img
-                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                                src="/images/about_why.png"
                                 alt="Why Choose Us"
                                 className="w-full h-full object-cover"
                             />

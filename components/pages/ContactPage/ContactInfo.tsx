@@ -23,7 +23,7 @@ export default function ContactInfo() {
                 </div>
                 <div>
                     <h3 className="font-bold text-secondary-navy text-lg mb-1">Call Us</h3>
-                    <p className="text-secondary-navy font-bold">404.752.0600</p>
+                    <p className="text-secondary-navy font-bold">+91 84603 41318</p>
                     <p className="text-zinc-500 text-sm">Mon-Fri from 9am to 6pm.</p>
                 </div>
             </motion.div>
@@ -38,7 +38,7 @@ export default function ContactInfo() {
                 </div>
                 <div>
                     <h3 className="font-bold text-secondary-navy text-lg mb-1">Email Us</h3>
-                    <p className="text-secondary-navy font-bold">info@btcpa.net</p>
+                    <p className="text-secondary-navy font-bold">info@coreaxisglobe.com</p>
                     <p className="text-zinc-500 text-sm">We'll respond within 24 hours.</p>
                 </div>
             </motion.div>
@@ -53,8 +53,8 @@ export default function ContactInfo() {
                 </div>
                 <div>
                     <h3 className="font-bold text-secondary-navy text-lg mb-1">Visit Us</h3>
-                    <p className="text-secondary-navy font-bold">India Operations Center</p>
-                    <p className="text-zinc-500 text-sm">Strategic KPO Hub, India</p>
+                    <p className="text-secondary-navy font-bold">Mumbai Office</p>
+                    <p className="text-zinc-500 text-sm">301, Ackruti Star, Marol MIDC, Andheri (E), Mumbai 093</p>
                 </div>
             </motion.div>
 

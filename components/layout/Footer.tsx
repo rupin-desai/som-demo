@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
 
@@ -24,25 +24,11 @@ export default function Footer() {
                                 <span className="text-2xl">CX</span> CoreAxis Global
                             </span>
                         </div>
-                        <p className="text-zinc-400 mb-8 leading-relaxed text-sm">
+                        <p className="text-zinc-400 leading-relaxed text-sm">
                             We believe that the best results come from true partnership.
-                            Delivering financial confidence since 1980 through expert
+                            Delivering financial confidence through expert
                             advisory and solutions.
                         </p>
-                        <div className="flex space-x-4">
-                            <Link href="#" className="w-10 h-10 rounded-full bg-primary-navy flex items-center justify-center hover:bg-accent-gold hover:text-secondary-navy transition-all">
-                                <Linkedin className="w-5 h-5" />
-                            </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-primary-navy flex items-center justify-center hover:bg-accent-gold hover:text-secondary-navy transition-all">
-                                <Twitter className="w-5 h-5" />
-                            </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-primary-navy flex items-center justify-center hover:bg-accent-gold hover:text-secondary-navy transition-all">
-                                <Facebook className="w-5 h-5" />
-                            </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-primary-navy flex items-center justify-center hover:bg-accent-gold hover:text-secondary-navy transition-all">
-                                <Instagram className="w-5 h-5" />
-                            </Link>
-                        </div>
                     </motion.div>
 
                     {/* Column 2: Quick Links */}
@@ -75,21 +61,21 @@ export default function Footer() {
                             <li className="flex items-start gap-3 text-zinc-300">
                                 <MapPin className="w-5 h-5 text-accent-gold mt-1 shrink-0" />
                                 <span>
-                                    3310 Northside Parkway<br />
-                                    Suite 600<br />
-                                    Atlanta, GA 30327
+                                    301, Ackruti Star, Central Road,<br />
+                                    Marol MIDC, Andheri (E),<br />
+                                    Mumbai 400 093
                                 </span>
                             </li>
                             <li className="flex items-center gap-3 text-zinc-300">
                                 <Phone className="w-5 h-5 text-accent-gold shrink-0" />
-                                <a href="tel:7703962200" className="hover:text-white transition-colors">
-                                    770.396.2200
+                                <a href="tel:+918460341318" className="hover:text-white transition-colors">
+                                    +91 84603 41318
                                 </a>
                             </li>
                             <li className="flex items-center gap-3 text-zinc-300">
                                 <Mail className="w-5 h-5 text-accent-gold shrink-0" />
-                                <a href="mailto:info@btcpa.net" className="hover:text-white transition-colors">
-                                    info@btcpa.net
+                                <a href="mailto:info@coreaxisglobe.com" className="hover:text-white transition-colors">
+                                    info@coreaxisglobe.com
                                 </a>
                             </li>
                         </ul>

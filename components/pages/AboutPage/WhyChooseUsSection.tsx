@@ -34,7 +34,7 @@ export default function WhyChooseUsSection() {
                 <div className="flex flex-col lg:flex-row items-stretch gap-16">
                     {/* Left Image Side */}
                     <motion.div
-                        className="w-full lg:w-1/2 relative min-h-[600px]"
+                        className="w-full lg:w-1/2 relative aspect-4/3 md:aspect-auto lg:min-h-[600px]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -48,8 +48,8 @@ export default function WhyChooseUsSection() {
                             />
 
                             {/* Floating Badge */}
-                            <div className="absolute -bottom-8 -right-8 bg-accent-gold text-secondary-navy p-7 rounded-3xl shadow-xl max-w-[250px] border-5 border-white/80">
-                                <p className="font-bold text-left leading-tight text-sm md:text-lg">
+                            <div className="absolute -bottom-2 -right-2 md:-bottom-8 md:-right-8 bg-accent-gold text-secondary-navy p-5 md:p-7 rounded-2xl md:rounded-3xl shadow-xl max-w-[200px] md:max-w-[250px] border-4 md:border-5 border-white/80">
+                                <p className="font-bold text-left leading-tight text-xs md:text-lg">
                                     EMPOWERING FIRMS WITH GLOBAL TALENT
                                 </p>
                             </div>

@@ -1,6 +1,38 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+'use client';
+
+import { useState, useRef } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactContent() {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formRef.current) return;
+
+        setStatus('sending');
+
+        try {
+            await emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_an2bbwg',
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_bbz95bp',
+                formRef.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YiToMl-fBuN5f-Rv-'
+            );
+
+            setStatus('success');
+            setMessage('Your message has been sent successfully! We will get back to you soon.');
+            formRef.current.reset();
+        } catch (error) {
+            console.error('EmailJS Error:', error);
+            setStatus('error');
+            setMessage('Something went wrong. Please try again later or contact us directly.');
+        }
+    };
+
     return (
         <section className="py-20 bg-zinc-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +55,7 @@ export default function ContactContent() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-primary-navy">Our Location</h4>
-                                        <p className="text-zinc-500">123 Business Avenue, Suite 100<br />Atlanta, GA 30303</p>
+                                        <p className="text-zinc-500">301, Ackruti Star, Central Road,<br />Marol MIDC, Andheri (E), Mumbai 400 093</p>
                                     </div>
                                 </div>
 
@@ -33,7 +65,7 @@ export default function ContactContent() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-primary-navy">Phone Number</h4>
-                                        <p className="text-zinc-500">404.752.0600</p>
+                                        <p className="text-zinc-500">+91 84603 41318</p>
                                     </div>
                                 </div>
 
@@ -43,7 +75,7 @@ export default function ContactContent() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-primary-navy">Email Address</h4>
-                                        <p className="text-zinc-500">info@btcpa.net</p>
+                                        <p className="text-zinc-500">info@coreaxisglobe.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -58,31 +90,90 @@ export default function ContactContent() {
                     {/* Contact Form */}
                     <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border-t-4 border-accent-gold">
                         <h3 className="text-2xl font-bold text-primary-navy mb-6">Send us a Message</h3>
-                        <form className="space-y-6">
+
+                        {status === 'success' && (
+                            <div className="mb-8 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center gap-3">
+                                <CheckCircle2 className="w-5 h-5" />
+                                <span>{message}</span>
+                            </div>
+                        )}
+
+                        {status === 'error' && (
+                            <div className="mb-8 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl flex items-center gap-3">
+                                <AlertCircle className="w-5 h-5" />
+                                <span>{message}</span>
+                            </div>
+                        )}
+
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="firstName" className="block text-sm font-medium text-zinc-700 mb-2">First Name</label>
-                                    <input type="text" id="firstName" className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all" placeholder="John" />
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="first_name"
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all"
+                                        placeholder="John"
+                                    />
                                 </div>
                                 <div>
                                     <label htmlFor="lastName" className="block text-sm font-medium text-zinc-700 mb-2">Last Name</label>
-                                    <input type="text" id="lastName" className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all" placeholder="Doe" />
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="last_name"
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all"
+                                        placeholder="Doe"
+                                    />
                                 </div>
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-2">Email Address</label>
-                                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all" placeholder="john@example.com" />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="user_email"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all"
+                                    placeholder="john@example.com"
+                                />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-2">Message</label>
-                                <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all" placeholder="How can we help you?"></textarea>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    rows={4}
+                                    className="w-full px-4 py-3 rounded-lg bg-zinc-50 border border-zinc-200 focus:border-primary-navy focus:ring-1 focus:ring-primary-navy outline-none transition-all"
+                                    placeholder="How can we help you?"
+                                ></textarea>
                             </div>
 
-                            <button type="button" className="w-full px-8 py-4 rounded-full bg-primary-navy text-white hover:bg-secondary-navy transition-all font-bold shadow-lg flex items-center justify-center gap-2">
-                                <span>Send Message</span>
-                                <Send className="w-4 h-4" />
+                            <button
+                                type="submit"
+                                disabled={status === 'sending'}
+                                className={`w-full px-8 py-4 rounded-full transition-all font-bold shadow-lg flex items-center justify-center gap-2 ${status === 'sending'
+                                    ? 'bg-zinc-400 cursor-not-allowed text-white'
+                                    : 'bg-primary-navy text-white hover:bg-secondary-navy cursor-pointer'
+                                    }`}
+                            >
+                                {status === 'sending' ? (
+                                    <>
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        <span>Sending...</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span>Send Message</span>
+                                        <Send className="w-4 h-4" />
+                                    </>
+                                )}
                             </button>
                         </form>
                     </div>

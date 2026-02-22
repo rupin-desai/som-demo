@@ -27,7 +27,7 @@ export default function PhilosophySection() {
 
                         <motion.h2
                             variants={wordStagger}
-                            className="text-5xl md:text-6xl font-bold text-secondary-navy mb-8 leading-tight"
+                            className="text-4xl md:text-6xl font-bold text-secondary-navy mb-8 leading-tight"
                         >
                             <span className="block">
                                 {["A", "Collaborative"].map((word, i) => (

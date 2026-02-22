@@ -6,7 +6,7 @@ import { fadeInUp, fadeInRight, staggerContainer, wordStagger, wordAnimation } f
 
 export default function HomeHero() {
     return (
-        <section className="relative min-h-dvh md:min-h-[700px] flex items-center overflow-hidden bg-secondary-navy">
+        <section className="relative min-h-svh md:min-h-[700px] flex items-center overflow-hidden bg-secondary-navy">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0 bg-black">
                 <picture className="w-full h-full">

@@ -10,17 +10,17 @@ export default function ServicesSection() {
         {
             title: "Accounting & Bookkeeping",
             image: "/images/home_accounting.png",
-            link: "#"
+            link: "/services/"
         },
         {
             title: "Tax Preparation & Compliance",
             image: "/images/home_tax.png",
-            link: "#"
+            link: "/services/"
         },
         {
             title: "Payroll Processing",
             image: "/images/home_payroll.png",
-            link: "#"
+            link: "/services/"
         }
     ];
 

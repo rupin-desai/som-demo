@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeInRight, staggerContainer, wordStagger, wordAnimation } from '@/utils/animations';
 
@@ -94,12 +95,12 @@ export default function HomeHero() {
                         variants={fadeInUp}
                         className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                     >
-                        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-accent-gold text-secondary-navy hover:bg-white hover:text-primary-navy transition-all font-bold text-base shadow-[0_0_15px_rgba(228,180,75,0.3)] hover:shadow-[0_0_20px_rgba(228,180,75,0.5)] cursor-pointer active:scale-95">
+                        <Link href="/services" className="w-full sm:w-auto px-8 py-4 rounded-full bg-accent-gold text-secondary-navy hover:bg-white hover:text-primary-navy transition-all font-bold text-base shadow-[0_0_15px_rgba(228,180,75,0.3)] hover:shadow-[0_0_20px_rgba(228,180,75,0.5)] cursor-pointer active:scale-95 text-center">
                             Explore Services
-                        </button>
-                        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-navy transition-all font-bold text-base cursor-pointer active:scale-95">
+                        </Link>
+                        <Link href="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-navy transition-all font-bold text-base cursor-pointer active:scale-95 text-center">
                             Connect Now
-                        </button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>

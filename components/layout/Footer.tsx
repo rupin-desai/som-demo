@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="bg-secondary-navy text-white pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16"
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
@@ -51,26 +51,15 @@ export default function Footer() {
                             Quick Links
                         </h3>
                         <ul className="space-y-4">
-                            {['Home', 'About Us', 'Our Services', 'Meet Our Team', 'Contact Us'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="text-zinc-300 hover:text-white hover:translate-x-1 transition-all inline-block">
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-
-                    {/* Column 3: Expertise */}
-                    <motion.div variants={fadeInUp}>
-                        <h3 className="text-accent-gold font-bold tracking-widest uppercase text-sm mb-8">
-                            Expertise
-                        </h3>
-                        <ul className="space-y-4">
-                            {['Tax & Compliance', 'Audit & Assurance', 'Business Advisory', 'Wealth Management', 'Client Accounting'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="text-zinc-300 hover:text-white hover:translate-x-1 transition-all inline-block">
-                                        {item}
+                            {[
+                                { name: 'Home', href: '/' },
+                                { name: 'About Us', href: '/about/' },
+                                { name: 'Services', href: '/services/' },
+                                { name: 'Contact', href: '/contact/' },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-zinc-300 hover:text-white hover:translate-x-1 transition-all inline-block">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}

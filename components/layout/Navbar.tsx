@@ -34,8 +34,8 @@ export default function Navbar() {
             <div className="bg-[#03213f] text-white text-sm sm:text-base py-2 border-b border-white/10 hidden md:block">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
                     <div className="flex items-center space-x-6">
-                        <a href="tel:+918460341318" className="flex items-center hover:text-[#e4b44b] transition-colors gap-2">
-                            <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-[#e4b44b]" /> <span>+91 84603 41318</span>
+                        <a href="tel:+917990968816" className="flex items-center hover:text-[#e4b44b] transition-colors gap-2">
+                            <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-[#e4b44b]" /> <span>+91 79909 68816</span>
                         </a>
                         <a href="mailto:info@coreaxisglobe.com" className="flex items-center hover:text-[#e4b44b] transition-colors gap-2">
                             <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-[#e4b44b]" /> <span>info@coreaxisglobe.com</span>
@@ -154,8 +154,8 @@ export default function Navbar() {
 
                                 {/* Mobile Contact Info */}
                                 <div className="mt-10 pt-10 border-t border-white/10 flex flex-col gap-4 text-zinc-400">
-                                    <a href="tel:+918460341318" className="flex items-center gap-3 hover:text-white transition-colors">
-                                        <Phone className="w-5 h-5 text-[#e4b44b]" /> <span>+91 84603 41318</span>
+                                    <a href="tel:+917990968816" className="flex items-center gap-3 hover:text-white transition-colors">
+                                        <Phone className="w-5 h-5 text-[#e4b44b]" /> <span>+91 79909 68816</span>
                                     </a>
                                     <a href="mailto:info@coreaxisglobe.com" className="flex items-center gap-3 hover:text-white transition-colors">
                                         <Mail className="w-5 h-5 text-[#e4b44b]" /> <span>info@coreaxisglobe.com</span>

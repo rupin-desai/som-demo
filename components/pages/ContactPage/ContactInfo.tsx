@@ -23,7 +23,7 @@ export default function ContactInfo() {
                 </div>
                 <div>
                     <h3 className="font-bold text-secondary-navy text-lg mb-1">Call Us</h3>
-                    <p className="text-secondary-navy font-bold">+91 84603 41318</p>
+                    <p className="text-secondary-navy font-bold">+91 79909 68816</p>
                     <p className="text-zinc-500 text-sm">Mon-Fri from 9am to 6pm.</p>
                 </div>
             </motion.div>

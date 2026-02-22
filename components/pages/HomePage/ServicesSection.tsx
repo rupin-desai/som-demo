@@ -19,7 +19,7 @@ export default function ServicesSection() {
         },
         {
             title: "Payroll Processing",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+            image: "/images/home_payroll.png",
             link: "#"
         }
     ];

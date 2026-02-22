@@ -23,17 +23,17 @@ export default function IndustriesSection() {
         {
             title: "Real Estate & Construction",
             description: "Project-based accounting, job costing, and tax planning for developers and contractors.",
-            image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1996&auto=format&fit=crop"
+            image: "/images/home_real.png"
         },
         {
             title: "Healthcare & Medical Practices",
             description: "Revenue cycle management and compliance for medical practices.",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/home_healthcare.png"
         },
         {
             title: "Financial Services & Wealth Management",
             description: "Strategic financial insights and reporting for wealth management firms.",
-            image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/home_finance.png"
         }
     ];
 

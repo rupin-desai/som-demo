@@ -83,13 +83,8 @@ export default function Footer() {
                 </motion.div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
+                <div className="pt-8 border-t border-white/10 flex justify-center items-center text-xs text-zinc-500">
                     <p>© 2026 CoreAxis Global. All rights reserved.</p>
-                    <div className="flex space-x-8">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Sitemap</Link>
-                    </div>
                 </div>
             </div>
         </footer>

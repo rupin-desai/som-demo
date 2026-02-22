@@ -89,11 +89,14 @@ export default function PhilosophySection() {
                             {/* Translucent Gold Shadow Shape */}
                             <div className="absolute top-5 left-5 w-full h-full bg-accent-gold/40 rounded-tl-[80px] rounded-br-[80px] rounded-tr-xl rounded-bl-xl -z-10"></div>
 
-                            {/* Image Container with Custom Border Radius */}
+                            {/* Video Container with Custom Border Radius */}
                             <div className="rounded-tl-[80px] rounded-br-[80px] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-xl bg-white p-2">
-                                <img
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Collaborative Team"
+                                <video
+                                    src="/videos/home_2.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
                                     className="w-full h-full object-cover rounded-tl-[70px] rounded-br-[70px] rounded-tr-lg rounded-bl-lg"
                                 />
                             </div>

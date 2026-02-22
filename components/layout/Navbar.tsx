@@ -53,9 +53,9 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-24">
                         {/* Logo */}
-                        <div className="shrink-0 flex items-center bg-white p-2 rounded-sm shadow-sm relative z-50">
+                        <div className="shrink-0 flex items-center bg-white p-1 rounded-sm shadow-sm relative z-50">
                             <Link href="/">
-                                <img src="/logo.jpeg" alt="CoreAxis Global" className="h-12 md:h-18 w-auto object-contain" />
+                                <img src="/logo.jpeg" alt="CoreAxis Global" className="h-12 md:h-19 w-auto object-contain" />
                             </Link>
                         </div>
 

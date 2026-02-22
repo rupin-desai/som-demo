@@ -51,13 +51,11 @@ export default function Navbar() {
             {/* Main Bar - Blue */}
             <nav className="bg-[#06356b] shadow-lg relative z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-24">
+                    <div className="flex justify-between items-center md:h-24">
                         {/* Logo */}
-                        <div className="shrink-0 flex items-center bg-white px-6 py-3 rounded-sm shadow-sm relative z-50">
-                            <Link href="/" className="flex items-center gap-2">
-                                <div className="text-[#03213f] font-bold text-2xl tracking-tighter uppercase leading-none">
-                                    CoreAxis <br /> <span className="text-green-600">Global</span>
-                                </div>
+                        <div className="shrink-0 flex items-center bg-white p-2 rounded-sm shadow-sm relative z-50">
+                            <Link href="/">
+                                <img src="/logo.jpeg" alt="CoreAxis Global" className="h-12 w-auto object-contain" />
                             </Link>
                         </div>
 

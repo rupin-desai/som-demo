@@ -19,10 +19,7 @@ export default function Footer() {
                     {/* Column 1: Brand & About */}
                     <motion.div variants={fadeInUp}>
                         <div className="mb-6 bg-white p-2 w-fit rounded">
-                            {/* Logo Placeholder - Adjust as needed */}
-                            <span className="text-secondary-navy font-bold text-xl flex items-center gap-2">
-                                <span className="text-2xl">CX</span> CoreAxis Global
-                            </span>
+                            <img src="/logo.jpeg" alt="CoreAxis Global" className="h-10 w-auto object-contain" />
                         </div>
                         <p className="text-zinc-400 leading-relaxed text-sm">
                             We believe that the best results come from true partnership.

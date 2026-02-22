@@ -9,12 +9,12 @@ export default function ServicesSection() {
     const services = [
         {
             title: "Accounting & Bookkeeping",
-            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop",
+            image: "/images/home_accounting.png",
             link: "#"
         },
         {
             title: "Tax Preparation & Compliance",
-            image: "https://images.unsplash.com/photo-1554224154-260327c00c19?q=80&w=2065&auto=format&fit=crop",
+            image: "/images/home_tax.png",
             link: "#"
         },
         {

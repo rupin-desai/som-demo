@@ -2,6 +2,12 @@ import PageHero from "@/components/layout/PageHero";
 import ServiceDetails from "@/components/pages/ServicesPage/ServiceDetails";
 import SecuritySection from "@/components/pages/ServicesPage/SecuritySection";
 import CTASection from "@/components/layout/CTASection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Our Services | CoreAxis Global",
+    description: "Explore our comprehensive accounting and financial solutions, from tax preparation to payroll processing, designed for business growth.",
+};
 
 export default function ServicesPage() {
     return (

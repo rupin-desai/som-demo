@@ -4,6 +4,12 @@ import TeamSection from "@/components/pages/AboutPage/TeamSection";
 import WhyChooseUsSection from "@/components/pages/AboutPage/WhyChooseUsSection";
 import WhyIndiaSection from "@/components/pages/AboutPage/WhyIndiaSection";
 import CTASection from "@/components/layout/CTASection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About Us | CoreAxis Global",
+    description: "Learn about our mission, vision, and the dedicated team of professionals delivering financial confidence and expert advisory worldwide.",
+};
 
 export default function AboutPage() {
     return (

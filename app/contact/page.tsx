@@ -1,6 +1,12 @@
 import PageHero from "@/components/layout/PageHero";
 import ContactInfo from "@/components/pages/ContactPage/ContactInfo";
 import ContactForm from "@/components/pages/ContactPage/ContactForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact Us | CoreAxis Global",
+    description: "Connect with our global support team for inquiries about our accounting, tax, and payroll services. We're here to help you transform your operations.",
+};
 
 export default function ContactPage() {
     return (

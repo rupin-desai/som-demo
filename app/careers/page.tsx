@@ -1,5 +1,11 @@
 import PageHero from "@/components/layout/PageHero";
 import CultureSection from "@/components/pages/HomePage/CultureSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Careers | Join CoreAxis Global",
+    description: "Join our team of experts and be part of a collaborative, innovative culture. Discover career opportunities in global financial services.",
+};
 
 export default function CareersPage() {
     return (

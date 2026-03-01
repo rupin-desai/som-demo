@@ -47,7 +47,7 @@ export default function ContactForm() {
                 Send us a Message
             </h2>
             <p className="text-zinc-500 mb-8">
-                Fill out the form below and we'll get back to you shortly.
+                Fill out the form below and we&apos;ll get back to you shortly.
             </p>
 
             {status === 'success' && (

@@ -68,7 +68,7 @@ export default function WhyChooseUsSection() {
                             <h2 className="text-4xl md:text-5xl font-bold text-secondary-navy mb-6">
                                 Why Choose Us?
                             </h2>
-                            <p className="text-zinc-600 text-lg leading-relaxed">
+                            <p className="text-zinc-600 text-justify text-lg leading-relaxed">
                                 Unlock the full potential of your firm with our expert <span className="font-bold text-secondary-navy">Knowledge Processing Outsourcing (KPO)</span> services. Specializing in Accounting, Tax, Payroll, and Bookkeeping, we provide seamless support to businesses worldwide from our highly skilled team in India.
                             </p>
                         </motion.div>

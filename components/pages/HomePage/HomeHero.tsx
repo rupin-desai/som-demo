@@ -91,7 +91,8 @@ export default function HomeHero() {
                         variants={fadeInUp}
                         className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 font-normal mb-8 md:mb-10 leading-relaxed max-w-2xl"
                     >
-                        Audit, Legal & Advisory Solutions Built for Today’s Businesses
+                        Audit, Tax,  Legal & Advisory Solutions 
+                        <br/>Built for Today’s Businesses
                     </motion.h2>
 
                     <motion.div

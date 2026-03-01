@@ -13,7 +13,7 @@ export default function ServicesSection() {
             link: "/services/"
         },
         {
-            title: "Tax Preparation & Compliance",
+            title: "Tax & Compliance",
             image: "/images/home_tax.png",
             link: "/services/"
         },
@@ -73,7 +73,7 @@ export default function ServicesSection() {
 
                                 {/* Content */}
                                 <div className="p-6 md:p-8">
-                                    <h3 className="text-xl md:text-2xl font-bold text-secondary-navy mb-6 md:mb-8 min-h-[50px] md:min-h-[64px]">
+                                    <h3 className="text-xl md:text-xl font-bold text-secondary-navy mb-6 md:mb-8 min-h-[50px] md:min-h-[64px]">
                                         {service.title}
                                     </h3>
 

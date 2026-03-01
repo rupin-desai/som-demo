@@ -54,7 +54,7 @@ export default function PhilosophySection() {
 
                         <motion.p
                             variants={fadeInUp}
-                            className="text-zinc-600 mb-10 leading-relaxed text-xl"
+                            className="text-zinc-600 mb-10 leading-relaxed text-xl text-justify"
                         >
                             We believe that the best results come from true partnership.
                             By combining our deep technical expertise with a genuine

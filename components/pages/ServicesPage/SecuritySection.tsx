@@ -94,7 +94,7 @@ export default function SecuritySection() {
             <ul className="space-y-5">
               {platforms.map((platform, index) => (
                 <li key={index} className="flex items-center gap-4">
-                  <div className="bg-white rounded-lg  py-1.5 flex items-center justify-center h-9 w-28 shrink-0">
+                  <div className="bg-white rounded-lg py-1 px-2 flex items-center justify-center h-8 w-20 shrink-0">
                     <img
                       src={platform.logo}
                       alt={platform.name}

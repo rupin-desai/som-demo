@@ -48,7 +48,7 @@ export default function CareersSection() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-zinc-600 text-justify mb-8 leading-relaxed text-base md:text-lg"
+              className="text-zinc-600 text-justify mb-8 leading-relaxed text-base md:text-md"
             >
               CoreAxis Global unites a dynamic team of seasoned, up-and-coming
               professionals in finance, accounting, and law. Client satisfaction

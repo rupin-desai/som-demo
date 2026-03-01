@@ -1,95 +1,121 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer, wordStagger, wordAnimation } from '@/utils/animations';
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  staggerContainer,
+  wordStagger,
+  wordAnimation,
+} from "@/utils/animations";
 
 export default function ServicesSection() {
-    const services = [
-        {
-            title: "Accounting & Bookkeeping",
-            image: "/images/home_accounting.png",
-            link: "/services/"
-        },
-        {
-            title: "Tax & Compliance",
-            image: "/images/home_tax.png",
-            link: "/services/"
-        },
-        {
-            title: "Payroll Processing",
-            image: "/images/home_payroll.png",
-            link: "/services/"
-        }
-    ];
+  const services = [
+    {
+      title: "Accounting & Bookkeeping",
+      image: "/images/home_accounting.png",
+      link: "/services/",
+    },
+    {
+      title: "Tax & Compliance",
+      image: "/images/home_tax.png",
+      link: "/services/",
+    },
+    {
+      title: "Payroll Processing",
+      image: "/images/home_payroll.png",
+      link: "/services/",
+    },
+    {
+      title: "Legal",
+      image: "/images/home_legal.png",
+      link: "/services/",
+    },
+    {
+      title: "Budget / Forecasting",
+      image: "/images/home_budget.png",
+      link: "/services/",
+    },
+    {
+      title: "CFO Services",
+      image: "/images/home_cfo.png",
+      link: "/services/",
+    },
+  ];
 
-    return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    {/* Header */}
-                    <div className="text-center mb-12 md:mb-16">
-                        <motion.span
-                            variants={fadeInUp}
-                            className="text-accent-gold font-bold tracking-widest uppercase text-sm md:text-base mb-4 block"
-                        >
-                            Our Services
-                        </motion.span>
-                        <motion.h2
-                            variants={wordStagger}
-                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-navy leading-tight"
-                        >
-                            {["Backed", "by", "Deep", "Industry", "Knowledge"].map((word, i) => (
-                                <motion.span key={i} variants={wordAnimation} className="inline-block mr-2 md:mr-3">
-                                    {word}
-                                </motion.span>
-                            ))}
-                        </motion.h2>
-                    </div>
+  return (
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <motion.span
+              variants={fadeInUp}
+              className="text-accent-gold font-bold tracking-widest uppercase text-sm md:text-base mb-4 block"
+            >
+              Our Services
+            </motion.span>
+            <motion.h2
+              variants={wordStagger}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-navy leading-tight"
+            >
+              {["Backed", "by", "Deep", "Industry", "Knowledge"].map(
+                (word, i) => (
+                  <motion.span
+                    key={i}
+                    variants={wordAnimation}
+                    className="inline-block mr-2 md:mr-3"
+                  >
+                    {word}
+                  </motion.span>
+                ),
+              )}
+            </motion.h2>
+          </div>
 
-                    {/* Grid of Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                variants={fadeInUp}
-                                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-zinc-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
-                            >
-                                {/* Image Container */}
-                                <div className="h-56 md:h-64 overflow-hidden relative">
-                                    <div className="absolute inset-0 bg-secondary-navy/10 group-hover:bg-transparent transition-colors z-10"></div>
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                </div>
+          {/* Grid of Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-zinc-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+              >
+                {/* Image Container */}
+                <div className="h-56 md:h-64 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-secondary-navy/10 group-hover:bg-transparent transition-colors z-10"></div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
 
-                                {/* Content */}
-                                <div className="p-6 md:p-8">
-                                    <h3 className="text-xl md:text-xl font-bold text-secondary-navy mb-6 md:mb-8 min-h-[50px] md:min-h-[64px]">
-                                        {service.title}
-                                    </h3>
+                {/* Content */}
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl md:text-xl font-bold text-secondary-navy mb-6 md:mb-8 min-h-[50px] md:min-h-[64px]">
+                    {service.title}
+                  </h3>
 
-                                    <Link
-                                        href={service.link}
-                                        className="inline-flex items-center text-primary-navy font-bold text-base hover:text-accent-gold transition-colors group/link"
-                                    >
-                                        Learn More
-                                        <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-    );
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center text-primary-navy font-bold text-base hover:text-accent-gold transition-colors group/link"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

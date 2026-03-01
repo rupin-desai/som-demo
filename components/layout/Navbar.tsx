@@ -32,7 +32,7 @@ export default function Navbar() {
         <header className="w-full z-50">
             {/* Top Bar - Darker Blue */}
             <div className="bg-[#03213f] text-white text-sm sm:text-base py-2 border-b border-white/10 hidden md:block">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-end items-center gap-2">
                     <div className="flex items-center space-x-6">
                         <a href="tel:+917990968816" className="flex items-center hover:text-[#e4b44b] transition-colors gap-2">
                             <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-[#e4b44b]" /> <span>+91 79909 68816</span>
@@ -41,10 +41,10 @@ export default function Navbar() {
                             <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-[#e4b44b]" /> <span>info@coreaxisglobe.com</span>
                         </a>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    {/* <div className="flex items-center space-x-4">
                         <Link href="#" className="hover:text-[#e4b44b] transition-colors">Online Payments & Client Resources</Link>
                         <Link href="#" className="hover:text-[#e4b44b] transition-colors">Careers</Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

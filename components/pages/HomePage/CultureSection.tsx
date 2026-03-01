@@ -64,7 +64,7 @@ export default function CultureSection() {
 
                         <motion.p
                             variants={fadeInUp}
-                            className="text-zinc-300 mb-8 leading-relaxed text-base md:text-lg"
+                            className="text-zinc-300 mb-8 text-justify leading-relaxed text-base md:text-lg"
                         >
                             We believe that happy employees lead to happy clients.
                             Our unique culture fosters collaboration, innovation, and

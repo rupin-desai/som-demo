@@ -42,8 +42,8 @@ export default function CareersSection() {
               variants={fadeInUp}
               className="text-xl md:text-2xl font-bold text-secondary-navy mb-6 leading-tight"
             >
-              We are one of the largest and fastest-growing certified public
-              accounting and consulting firms.
+              We are one of the fastest-growing certified public accounting and
+              consulting firms.
             </motion.h3>
 
             <motion.p

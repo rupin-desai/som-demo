@@ -38,7 +38,7 @@ export default function MissionVisionSection() {
                             <h3 className="text-xl font-bold text-accent-gold mb-4 uppercase tracking-wider">
                                 Our Mission
                             </h3>
-                            <p className="text-white text-justify leading-relaxed text-lg">
+                            <p className="text-white md:text-justify leading-relaxed text-lg">
                                 Our mission is to help businesses optimize their
                                 financial operations while ensuring compliance with
                                 international accounting standards. We bridge the
@@ -54,7 +54,7 @@ export default function MissionVisionSection() {
                             <h3 className="text-xl font-bold text-accent-gold mb-4 uppercase tracking-wider">
                                 Our Vision
                             </h3>
-                            <p className="text-white text-justify leading-relaxed text-lg italic">
+                            <p className="text-white md:text-justify leading-relaxed text-lg italic">
                                 "To be the most reliable and efficient outsourcing
                                 partner for accounting firms worldwide, enabling them
                                 to focus on <span className="text-accent-gold font-bold not-italic">growth, profitability, and client success.</span>"

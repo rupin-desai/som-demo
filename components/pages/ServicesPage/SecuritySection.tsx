@@ -91,22 +91,20 @@ export default function SecuritySection() {
             </div>
 
             {/* List */}
-            <ul className="space-y-5">
+            <div className="grid grid-cols-3 gap-4">
               {platforms.map((platform, index) => (
-                <li key={index} className="flex items-center gap-4">
-                  <div className="bg-white rounded-lg py-1 px-2 flex items-center justify-center h-8 w-20 shrink-0">
-                    <img
-                      src={platform.logo}
-                      alt={platform.name}
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
-                  <span className="text-white text-lg font-bold tracking-wide">
-                    {platform.name}
-                  </span>
-                </li>
+                <div
+                  key={index}
+                  className="bg-white rounded-lg py-2 px-3 flex items-center justify-center h-14 md:h-18"
+                >
+                  <img
+                    src={platform.logo}
+                    alt={platform.name}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.div>
 
           {/* Data Integrity Card */}

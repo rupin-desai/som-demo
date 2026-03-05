@@ -95,8 +95,17 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex justify-center items-center text-xs text-zinc-500">
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-center items-center gap-3 text-xs text-zinc-500">
           <p>© 2026 CoreAxis Global. All rights reserved.</p>
+          <span className="hidden sm:block">|</span>
+          <div className="flex items-center gap-2">
+            <span>Designed &amp; Maintained by</span>
+            <img
+              src="/images/logo_vistar.png"
+              alt="Vistar"
+              className="h-5 w-auto object-contain "
+            />
+          </div>
         </div>
       </div>
     </footer>

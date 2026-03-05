@@ -55,7 +55,7 @@ export default function Navbar() {
                         {/* Logo */}
                         <div className="shrink-0 flex items-center bg-white p-1 rounded-sm shadow-sm relative z-50">
                             <Link href="/">
-                                <img src="/logo.jpeg" alt="CoreAxis Global" className="h-12 md:h-19 w-auto object-contain" />
+                                <img src="/logo.jpeg" alt="CoreAxis Global" className="h-12 md:h-14 w-auto object-contain" />
                             </Link>
                         </div>
 

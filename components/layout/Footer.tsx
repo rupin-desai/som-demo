@@ -22,7 +22,7 @@ export default function Footer() {
               <img
                 src="/logo.jpeg"
                 alt="CoreAxis Global"
-                className="h-12 md:h-19 w-auto object-contain"
+                className="h-12 md:h-14 w-auto object-contain"
               />
             </div>
             <p className="text-zinc-400 leading-relaxed text-sm">
